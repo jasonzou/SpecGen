@@ -36,8 +36,8 @@ spec.index() # slurp info from sources
 # print spec.report()
 
 for p in spec.properties:
-  print("Got a property: " + p)
-  print(p.simple_report().encode('UTF-8'))
+  print "Got a property: " + p
+  print p.simple_report().encode('UTF-8')
 for c in spec.classes:
-  print("Got a class: " + c)
-  print(c.simple_report().encode('UTF-8'))
+  print "Got a class: " + c
+  print c.simple_report().encode('UTF-8')

@@ -23,7 +23,7 @@ from libvocab import RDF
 from libvocab import DOAP
 from libvocab import XFN
 
-bindings = { "xfn": XFN, "rdf": RDF, "rdfs": RDFS, "owl": OWL }
+bindings = { u"xfn": XFN, u"rdf": RDF, u"rdfs": RDFS, u"owl": OWL }
 
 import rdflib
 from rdflib import Namespace
@@ -61,4 +61,4 @@ query = Parse(q)
 relations = g.query(query, initNs=bindings)
 for (term, label, comment) in relations:
         p = Property(term)
-        print("property: "+str(p) + "label: "+str(label)+ " comment: "+comment)
+        print "property: "+str(p) + "label: "+str(label)+ " comment: "+comment

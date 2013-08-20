@@ -64,7 +64,7 @@ SIOCSERVICES = Namespace('http://rdfs.org/sioc/services#')
 # TODO: rationalise these two lists. or at least check they are same.
 
 
-import sys, time, re, urllib.request, urllib.parse, urllib.error, getopt
+import sys, time, re, urllib, getopt
 import logging
 import os.path
 import cgi
@@ -118,7 +118,7 @@ class Term(object):
     return s
 
   def id(self):
-    print("trying id")
+    print "trying id"
     try:
       s = self.id
     except NameError:
@@ -375,11 +375,11 @@ class Vocab(object):
     g = self.graph
     query = 'SELECT ?x ?l ?c WHERE { ?x rdfs:label ?l . ?x rdfs:comment ?c  } '
     relations = g.query(query)
-    print("Properties and Classes (%d terms)" % len(relations)) 
-    print(40*"-")
+    print "Properties and Classes (%d terms)" % len(relations) 
+    print 40*"-"
     for (term, label, comment) in relations:
-        print("term %s l: %s \t\tc: %s " % (term, label, comment))
-    print()
+        print "term %s l: %s \t\tc: %s " % (term, label, comment)
+    print
 
    # TODO: work out how to do ".encode('UTF-8')" here
 
@@ -863,7 +863,7 @@ class VocabReport(object):
 
   def termlink(self, text):
     result = text
-    for base, ns in self.vocab.ns_list.items():
+    for base, ns in self.vocab.ns_list.iteritems():
       if (base == self.vocab.uri):
         result = re.sub(r"<code>%s:(\w+)<\/code>" % ns, r"<code><a href='#term_\g<1>'>\g<1></a></code>", result )
       else:
@@ -903,7 +903,7 @@ class VocabReport(object):
     if self.vocab.uri != None:
       s += "URI: " + self.vocab.uri + "\n\n"
     for t in self.vocab.uterms:
-      print("TERM as string: ",t)
+      print "TERM as string: ",t
       s += t.simple_report()
     return s
  

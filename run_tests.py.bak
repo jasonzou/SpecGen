@@ -58,7 +58,7 @@ from libvocab import DOAP
 from libvocab import XFN
 
 # used in SPARQL queries below
-bindings = { "xfn": XFN, "rdf": RDF, "rdfs": RDFS, "owl": OWL, "doap": DOAP, "sioc": SIOC, "foaf": FOAF }
+bindings = { u"xfn": XFN, u"rdf": RDF, u"rdfs": RDFS, u"owl": OWL, u"doap": DOAP, u"sioc": SIOC, u"foaf": FOAF }
 
 import rdflib
 from rdflib.namespace import Namespace
@@ -103,7 +103,7 @@ class testSpecgen(unittest.TestCase):
   def testCanUseNonStrURI(self):
     """If some fancy object used with a string-oriented setter, we just take the string."""
     doap_spec = Vocab('examples/doap/','doap-en.rdf')
-    print("[1]")
+    print "[1]"
     doap_spec.index()
     doap_spec.uri = Namespace('http://usefulinc.com/ns/doap#')  # likely a common mistake
     self.assertEqual(doap_spec.uri, 'http://usefulinc.com/ns/doap#')
@@ -407,7 +407,7 @@ class testSpecgen(unittest.TestCase):
     page = VocabReport(foaf_spec, basedir='./examples/', temploc='template.html')
  
     simple = page.report()
-    print("Simple report: ", simple)
+    print "Simple report: ", simple
     self.assertNotEqual(simple, "Nope!")
 
 def suite():
@@ -416,7 +416,7 @@ def suite():
       return suite
 
 if __name__ == '__main__':
-    print("Running tests...")
+    print "Running tests..."
     suiteFew = unittest.TestSuite()
 
 #   Add things we know should pass to a subset suite
