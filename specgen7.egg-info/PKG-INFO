@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: specgen7
+Version: 0.0.1
+Summary: SpecGen7 is a documentation tool build on the specgen.
+Home-page: http://archdesc.info/specgen7/
+Author: Jason Zou
+Author-email: jason.zou@gmail.com
+License: AGPL
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Libraries :: Python Modules

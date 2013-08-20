@@ -1,0 +1,5 @@
+specgen7.egg-info/PKG-INFO
+specgen7.egg-info/SOURCES.txt
+specgen7.egg-info/dependency_links.txt
+specgen7.egg-info/requires.txt
+specgen7.egg-info/top_level.txt

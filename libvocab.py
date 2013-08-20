@@ -217,6 +217,7 @@ class Vocab(object):
     self._uri = uri
     self.dir = dir
     self.filename = os.path.join(dir, f) 
+    print(self.filename)
     self.graph.parse(self.filename)
     self.terms = []
     self.uterms = []

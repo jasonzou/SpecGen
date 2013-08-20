@@ -25,7 +25,7 @@ from libvocab import SIOC
 
 # Test SIOC spec
 
-fn = 'examples/sioc/sioc.rdf'
+fn = 'examples/sioc/'
 
 spec = Vocab( fn )
 
@@ -33,11 +33,11 @@ spec.uri = SIOC
 
 spec.raw()
 spec.index() # slurp info from sources
-print(spec.report().encode('UTF-8'))
+#print(spec.report())
 
 for p in spec.properties:
   print("Got a property: " + p)
-  print(p.simple_report().encode('UTF-8'))
+  print(p.simple_report())
 for c in spec.classes:
   print("Got a class: " + c)
-  print(c.simple_report().encode('UTF-8'))
+  print(c.simple_report())
