@@ -1,16 +1,8 @@
-This is an experimental new codebase for specgen tools.
+This is an enhancement of the original specgen tool. 
+It depends on rdflib, python3, flask, and flask-script.
 
-It depends utterly upon rdflib. See http://rdflib.net/
-
-If you're lucky, typing this is enough: 
-					easy_install -U rdflib
-
-and if you have problems there, update easy_install etc with: 
-
-					easy_install -U setuptools
-
-(Last time I did all this, I got Python errors but it still works.)
-
+Install
+    pip install -e .
 
 Inputs: RDF, HTML and OWL description(s) of an RDF vocabulary
 Output: an XHTML+RDFa specification designed for human users
